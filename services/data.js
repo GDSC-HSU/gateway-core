@@ -28,8 +28,8 @@ async function postDeviceSensorData(did, bodyTemperature,faceMask, covidIdentifi
             throw new Error("wrong datatype",{cause:"did isn't exist"})
         }
 
-        if (Number.isInteger(bodyTemperature) === true|| bodyTemperature === undefined){
-            throw new Error("wrong datatype",{cause:"bodyTemperature isn't float or exist"})
+        if (bodyTemperature === undefined){
+            throw new Error("wrong datatype",{cause:"bodyTemperature isn't exist"})
         }
 
         if(typeof faceMask !== "boolean" || faceMask === null || faceMask === undefined){
